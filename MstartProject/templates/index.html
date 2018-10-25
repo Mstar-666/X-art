@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/index/css/index.css">
+{% endblock %}
+{% block video %}
+    {#  整体加样式  #}
+    <div id="index">
+        <ul>
+        <li><a class="btn btn-primary">所有分类</a></li>
+            {% for cate in cates %}
+                <li><a class="btn btn-info">{{ cate.title }}</a></li>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock %}
